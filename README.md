@@ -14,6 +14,16 @@ Small console-based app created as a test task for BotsCrew. I wish you will lik
     * Create DB with name "root" and password "123456v", create schema named "uni";
     * OR insert name of your DB to field "spring.datasource.username" and password to "spring.datasource.password", additionaly change name of used schema in "spring.datasource.url"
 
+## How-To-Use
+
+Start application, write one of the following commands:
+
+* head {department_name} - get head of department           
+* statistics {department_name} - department statistics         
+* salary {department_name} - get average salary by department
+* count {department_name} - get amount of employee by department   
+* search {suffix} - global search          
+
 ## Used Technologies
 
 * Spring Boot
