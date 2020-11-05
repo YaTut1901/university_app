@@ -52,6 +52,8 @@ public class CommandExecutor {
                 return lectorService.search(command[1]).stream()
                         .map(lector -> lector.getName() + " " + lector.getSurname() + ", " + lector.getDegree().getName() + ", salary: " + lector.getSalary())
                         .collect(Collectors.joining("\n"));
+            case "quit":
+                System.exit(0);
             default:
                 return "No such command available";
         }

@@ -8,8 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import university.app.exception.WrongCommandFormatException;
-import university.app.service.DepartmentService;
-import university.app.service.LectorService;
 import university.app.util.CommandExecutor;
 import university.app.util.DataInjector;
 
@@ -23,20 +21,14 @@ public class UniversityApp implements CommandLineRunner {
                                              + "---                                     salary {department_name} - get average salary by department                                       ---" + "\n"
                                              + "---                                    count {department_name} - get amount of employee by department                                     ---" + "\n"
                                              + "---                                                   search {suffix} - global search                                                     ---" + "\n"
+                                             + "---                                                      quit program - quit program                                                      ---" + "\n"
                                              + "---------------------------------------------------------------------------------------------------------------------------------------------" + "\n"
                                              + "---------------------------------------------------------------------------------------------------------------------------------------------" + "\n";
-    private final LectorService lectorService;
-    private final DepartmentService departmentService;
     private final DataInjector dataInjector;
     private final CommandExecutor commandExecutor;
 
     @Autowired
-    public UniversityApp(LectorService lectorService,
-                         DepartmentService departmentService,
-                         DataInjector dataInjector,
-                         CommandExecutor commandExecutor) {
-        this.lectorService = lectorService;
-        this.departmentService = departmentService;
+    public UniversityApp(DataInjector dataInjector, CommandExecutor commandExecutor) {
         this.dataInjector = dataInjector;
         this.commandExecutor = commandExecutor;
     }
