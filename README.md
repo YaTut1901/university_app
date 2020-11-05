@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Small console-based app created as a test task for BotsCrew. I wish you will like it :smile:
+Small console-based app created as a test task for BotsCrew. I wish you like it :smile:
 
 ## How-To-Run
 
